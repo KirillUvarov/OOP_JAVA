@@ -1,4 +1,4 @@
-package Seminars.S_1;
+package codeforces_solutions;
 
 import java.time.LocalDate;
 

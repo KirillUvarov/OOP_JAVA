@@ -1,9 +1,9 @@
-package Seminars.S_1;
+package codeforces_solutions;
 
 public class Owner {
-    public String fullName;
+    private String fullName;
+
     public Owner(String fullName) {
         this.fullName = fullName;
     }
-
 }
