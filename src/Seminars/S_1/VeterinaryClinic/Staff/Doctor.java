@@ -1,4 +1,4 @@
-package Seminars.S_1.Staff;
+package Seminars.S_1.VeterinaryClinic.Staff;
 
 import Seminars.S_1.Animals.Animal;
 

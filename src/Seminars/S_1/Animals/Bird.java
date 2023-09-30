@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Bird extends Animal implements Flyable {
-
-    public double wingSpan;
+    private double speed;
+//    public double wingSpan;
 
     public Bird(String name, double weight, Owner owner, LocalDate birthDay, List<Vaccination> vaccinations, Colour colour) {
         super(name, weight, owner, birthDay, vaccinations, colour);
@@ -24,11 +24,22 @@ public class Bird extends Animal implements Flyable {
         super(name);
     }
 
-    public void setWingspan(Integer wingspan) {
-        this.wingSpan = wingspan;
+//    public void setWingspan(Integer wingspan) {
+//        this.wingSpan = wingspan;
+//    }
+
+//    public double getWingspan() {
+//        return wingSpan;
+//    }
+
+
+    public Bird(String name, double speed) {
+        super(name);
+        this.speed = speed;
     }
 
-    public double getWingspan() {
-        return wingSpan;
+    @Override
+    public double getFlySpeed() {
+        return 20.0;
     }
 }

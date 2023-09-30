@@ -3,11 +3,12 @@ package Seminars.S_1.Animals;
 import Seminars.S_1.Colour;
 import Seminars.S_1.Owner;
 import Seminars.S_1.Vaccination;
+import Seminars.S_1.VeterinaryClinic.Staff.Illable;
 
 import java.time.LocalDate;
 import java.util.List;
 
-public class Animal {
+public class Animal implements Illable {
     protected String name;
     protected double weight;
     protected Owner owner;
@@ -47,7 +48,7 @@ public class Animal {
 
     public void lifeCycleRun() {
         wakeUp();
-        goGo();
+//        goGo();
         findFood();
         eat();
         toPlay();
@@ -55,7 +56,7 @@ public class Animal {
     }
     public void lifeCycleSwim() {
         wakeUp();
-        goSwim();
+//        goSwim();
         findFood();
         eat();
         toPlay();
@@ -78,23 +79,23 @@ public class Animal {
     }
     private void goToSleep() {System.out.println(this.TYPE + " ложится спать ");}
 
-    public void goGo() {
-        if (!(this.TYPE.equals(Bird.class.getSimpleName()) || this.TYPE.equals(Bat.class.getSimpleName()))) {
-            System.out.println(this.TYPE + " не бегает, потому что не умеет");
-        } else {
-            System.out.println(this.TYPE + " бегает ");
-        }
-    }
+//    public void goGo() {
+//        if (!(this.TYPE.equals(Bird.class.getSimpleName()) || this.TYPE.equals(Bat.class.getSimpleName()))) {
+//            System.out.println(this.TYPE + " не бегает, потому что не умеет");
+//        } else {
+//            System.out.println(this.TYPE + " бегает ");
+//        }
+//    }
 
 
 
-    public void goSwim() {
-        if (!(this.TYPE.equals(SeaSnake.class.getSimpleName()) || this.TYPE.equals(Fish.class.getSimpleName()))) {
-            System.out.println(this.TYPE + " не плавает, потому что не умеет");
-        } else {
-            System.out.println(this.TYPE + " плавает ");
-        }
-    }
+//    public void goSwim() {
+//        if (!(this.TYPE.equals(SeaSnake.class.getSimpleName()) || this.TYPE.equals(Fish.class.getSimpleName()))) {
+//            System.out.println(this.TYPE + " не плавает, потому что не умеет");
+//        } else {
+//            System.out.println(this.TYPE + " плавает ");
+//        }
+//    }
 
 
     public String getName() {
@@ -122,6 +123,10 @@ public class Animal {
         return TYPE;
     }
 
+    @Override
+    public void heal() {
+        System.out.println("Ветеринар лечит " + this.TYPE + " " + this.name);
+    }
 }
 
 
