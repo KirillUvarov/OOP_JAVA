@@ -1,9 +1,8 @@
-package Seminars.S_1;
+package Seminars.S_1.Animals;
 
-import Seminars.S_1.Animals.Bat;
-import Seminars.S_1.Animals.Bird;
-import Seminars.S_1.Animals.Fish;
-import Seminars.S_1.Animals.SeaSnake;
+import Seminars.S_1.Colour;
+import Seminars.S_1.Owner;
+import Seminars.S_1.Vaccination;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -39,7 +38,7 @@ public class Animal {
 
     public void lifeCycleFly() {
         wakeUp();
-        goFly();
+//        goFly();
         findFood();
         eat();
         toPlay();
@@ -87,13 +86,7 @@ public class Animal {
         }
     }
 
-    public void goFly() {
-        if (!(this.TYPE.equals(Bird.class.getSimpleName()) || this.TYPE.equals(Bat.class.getSimpleName()))) {
-            System.out.println(this.TYPE + " не летает, потому что не умеет");
-        } else {
-            System.out.println(this.TYPE + " летает ");
-        }
-    }
+
 
     public void goSwim() {
         if (!(this.TYPE.equals(SeaSnake.class.getSimpleName()) || this.TYPE.equals(Fish.class.getSimpleName()))) {

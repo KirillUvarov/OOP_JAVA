@@ -1,6 +1,5 @@
 package Seminars.S_1.Animals;
 
-import Seminars.S_1.Animal;
 import Seminars.S_1.Colour;
 import Seminars.S_1.Owner;
 import Seminars.S_1.Vaccination;
